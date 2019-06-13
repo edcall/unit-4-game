@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/javascript/game.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body id="main">
+    <header id="header">Crystal Collector</header>
+    <br>
+    <div id="container">
+        <div id="para">
+            <p>You will be given a random number at the start of the game.</p>
+
+            <p>There are four crystals below. By clicking on a Crystal you will add a specific amount of points to your
+                total score.</p>
+
+            <p>You win the game by matching your total score to rendom number. You lose the game of your total score
+                goes above the random number.</p>
+
+            <p> The value of each crystal in hidden from you until you click on it.</p>
+
+            <p> Each time when the game starts, the game will change the value of each crystal.</p>
+        </div>
+        <div>
+            <h1 id="targetNumber">
+
+            </h1>
+        </div>
+
+        <div class="button">
+            <img src="assets/images/ruby.jpg" alt="" class="ruby">
+            <img src="assets/images/diamond.png" alt="" class="diamond">
+            <img src="assets/images/yellow.jpg" alt="" class="topaz">
+            <img src="assets/images/emerald.jpg" alt="" class="emerald">
+        </div>
+
+    </div>
+    <h3>
+        Your Guess: <span id="result"></span>
+    </h3>
+
+    </div>
+
+
+    <script type="text/javascript">
+
+
+
+        $(document).ready(function () {
+            var random = Math.random();
+            var counter = 0
+            var targetNumber = 100
+            var result = []
+
+            targetNum = Math.floor(Math.random() * 100) + 30;
+
+            $(".ruby").on("click", function () {
+                document.getElementById("result").innerHTML = Math.floor((Math.random() * 21) + 1);
+            });
+            $(".diamond").on("click", function () {
+                document.getElementById("result").innerHTML = Math.floor((Math.random() * 21) + 1);
+            });
+            $(".topaz").on("click", function () {
+                document.getElementById("result").innerHTML = Math.floor((Math.random() * 21) + 1);
+            });
+            $(".emerald").on("click", function () {
+                document.getElementById("result").innerHTML = Math.floor((Math.random() * 21) + 1);
+            });
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>
